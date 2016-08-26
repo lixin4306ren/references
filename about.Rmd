@@ -1,5 +1,8 @@
 ---
-title: "About This Website"
+title: "About This Website and Me"
 ---
 
-More about this website.
+Waiting for ...
+
+```{r, child="_sessioninfo.Rmd"}
+```
