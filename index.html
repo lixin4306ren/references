@@ -241,7 +241,124 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>library(RgoogleMaps)
+library(RCurl)
+library(XML)
+Start = Sys.time()
+day = 13
+skip = 0
+website = &quot;http://www.86kongqi.com/&quot;
+pm = getURL(website,.encoding=&quot;UTF-8&quot;)
+pmweb = htmlParse(pm,encoding=&quot;UTF-8&quot;)
+pmtotal = getNodeSet(pmweb,&quot;//div[@class=&#39;wrap&#39;]//a&quot;)
+pmurl = sapply(X=pmtotal,FUN=xmlGetAttr,name=&quot;href&quot;)
+#pmcityA = getNodeSet(pmtotal[[1]],&quot;//strong&quot;)
+pmcity = sapply(X=pmtotal,FUN=xmlValue)
+pmcity = gsub(pattern=&quot;[A-Z]&quot;,replacement=&quot;&quot;,x=pmcity)
+
+index = match(c(&quot;黄山&quot;,&quot;菏泽&quot;,&quot;九华山风景区&quot;,&quot;恩施州&quot;,&quot;黄冈&quot;,&quot;随州&quot;),table=pmcity)
+
+pmcity = pmcity[-index]
+pmurl = pmurl[-index]
+
+read.csv(&quot;China.Cities.Location.Linux.csv&quot;)-&gt;China
+which(pmcity %in% China$city)-&gt;ind1
+which(China$city %in% pmcity)-&gt;ind2
+
+result&lt;-China[ind2,]</code></pre>
+<pre class="r"><code>pmurl[ind1]-&gt;pmurl
+pmcity[ind1]-&gt;pmcity
+
+data = NULL
+date = NULL
+ii=0;
+for( i in pmurl)
+{
+  ii&lt;-ii+1
+  cat(paste(&quot;Get data for&quot;,result$city[ii],&quot;... ...\n&quot;))
+  cityweb = getURL(url=paste(website,i,sep=&quot;&quot;),.encoding=&quot;UTF-8&quot;)
+  cityweb = strsplit(x=cityweb,split=&quot;flashvalue&quot;)[[1]]
+  cityweb = cityweb[grepl(pattern=&quot;set name&quot;,x=cityweb)]
+  cityweb = cityweb[grepl(pattern=&quot;月&quot;,x=cityweb)]
+  pm = NULL
+  if(length(cityweb) == 0)
+  {
+    cat(&quot;Date is incorrect... skip...\n&quot;)
+    next
+  }
+   
+  for(j in cityweb[day])
+  {
+    j = cityweb[day]
+    tmp = strsplit(x=j,split=&quot;\\s&quot;)[[1]]
+    name = tmp[grepl(pattern=&quot;name&quot;,x=tmp)]
+    name = strsplit(x=name,split=&quot;\\&#39;&quot;)[[1]][2]
+    value = tmp[grepl(pattern=&quot;value&quot;,x=tmp)]
+    value = as.numeric(strsplit(x=value,split=&quot;\\&#39;&quot;)[[1]][2])
+    rm(tmp)
+    pm = cbind(pm,value)
+  }
+  if(!is.null(date))
+  {
+    if(date != name)
+      {
+      cat(&quot;Date is incorrect... skip...\n&quot;)
+      skip = skip + 1
+      next
+    }
+  }else{
+    date = name
+  }
+  data = rbind(data,cbind(city=as.vector(result$city[ii]),pm))
+}</code></pre>
+<pre><code>## Get data for 兴安盟 ... ...
+## Get data for 锡林郭勒盟 ... ...
+## Get data for 阿拉善盟 ... ...
+## Get data for 大兴安岭地区 ... ...
+## Get data for 铜仁地区 ... ...
+## Get data for 昌都地区 ... ...
+## Get data for 山南地区 ... ...
+## Get data for 日喀则地区 ... ...
+## Get data for 那曲地区 ... ...
+## Get data for 阿里地区 ... ...
+## Get data for 林芝地区 ... ...
+## Get data for 海东地区 ... ...
+## Get data for 吐鲁番地区 ... ...
+## Get data for 哈密地区 ... ...
+## Get data for 阿克苏地区 ... ...
+## Get data for 喀什地区 ... ...
+## Get data for 和田地区 ... ...
+## Get data for 塔城地区 ... ...
+## Get data for 阿勒泰地区 ... ...</code></pre>
+<pre class="r"><code>lon = result[,3]
+lat = result[,2]
+
+pm = as.numeric(data[,2])
+
+tp.pm = GetMap.bbox(lonR=lon,latR=lat)
+pm.max = max(pm)
+red = seq(from=0,to=1,length.out=pm.max)
+green = seq(from=1,to=0,length.out=pm.max)
+blue = seq(from=0,to=0,length.out=pm.max)
+col = rgb(red=red,green=green,blue=blue,alpha=0.5)
+col = col[pm]
+cex = pm/100 + 5
+suppressWarnings(expr=PlotOnStaticMap(MyMap=tp.pm,lat=lat,lon=lon,pch=20,col=col,cex=cex,mar=c(0,0,2,0)))
+title(main=paste(date,&quot;全国&quot;,length(pm),&quot;个主要城市PM2.5分布情况&quot;,sep=&quot;&quot;))
+text.col = rgb(red=1,green=1,blue=1,alpha=0.9)
+text(x=210,y=-250,labels=paste(&quot;数据来源：&quot;,website,sep=&quot;&quot;),cex=0.8,col=text.col)
+text(x=210,y=-230,labels=&quot;R语言  RgoogleMaps  @Conda&quot;,cex=0.8,col=text.col)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>Stop = Sys.time()
+Cost = Stop - Start
+cat(paste(&quot;\n\n\nIt cost&quot;,Cost,&quot;minutes.\n&quot;))</code></pre>
+<pre><code>## 
+## 
+## 
+## It cost 22.7657318115234 minutes.</code></pre>
+<pre class="r"><code>cat(paste(&quot;Gather&quot;,length(pm),&quot;cities pm 2.5 data, and skip&quot;,skip,&quot;city for incorrect date.&quot;))</code></pre>
+<pre><code>## Gather 19 cities pm 2.5 data, and skip 0 city for incorrect date.</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 
 <p>Copyright &copy; 2016 Skynet, Inc. All rights reserved.</p>
 
