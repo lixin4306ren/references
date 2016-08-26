@@ -2,8 +2,25 @@
 title: "活到老，学到老"
 ---
 
-Hello, Website!
-
-```{r}
+```{r echo=F}
 source("utils.R")
 ```
+
+```{r, echo=FALSE,eval=F}
+thumbnail("Apple", "images/apple.png", "https://en.wikipedia.org/wiki/Apple")
+thumbnail("Grape", "images/grape.png", "https://en.wikipedia.org/wiki/Grape")
+thumbnail("Peach", "images/peach.png", "https://en.wikipedia.org/wiki/Peach")
+```
+
+```{r echo=FALSE}
+library(tmap)
+data(land)
+data(World)
+data(metro)
+tm_shape(World, bbox = "China") +
+    tm_polygons("MAP_COLORS", palette="Pastel2") +
+tm_shape(metro) +
+    tm_bubbles("pop2010", title.size = "Population") +
+    tm_text("name", size = "pop2010", legend.size.show = FALSE, root=8, size.lowerbound = .7, auto.placement = TRUE)
+```
+
