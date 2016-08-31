@@ -2,20 +2,134 @@
 title: "活到老，学到老"
 ---
 
-```{r echo=F}
-source("utils.R")
+```{r leaflet, echo=F,message=F,warning=F}
+library(leaflet)
+library(REmap)
+china <- readRDS("~/map/CHN_adm_rds/CHN_adm2.rds")
+center <- get_city_coord('天水')
+pos<-get_city_coord('西安')
+start_pos <- get_city_coord('昆明')
+read.table("~/map/CHN_adm_rds/city_visited.tab",
+           sep = "\t",
+           quote = "") -> city
+ifelse(city[, 3] == "1", "red", "white") -> col
+m <- leaflet(china) %>%
+  setView(lng = center[1], lat = center[2], zoom = 4) %>%
+  addTiles() %>%
+  addMarkers(lng = pos[1], lat = pos[2], popup = "hometown") %>%
+  addPolygons(
+    fillColor = col,
+    stroke = T,
+    color = "blue",
+    weight = 1
+  ) %>%
+  addCircleMarkers(lng=start_pos[1],lat=start_pos[2],radius=10,color="blue",popup =     "起点") %>%
+  addLegend(
+    "bottomright",
+    colors = c("white","red"),
+    labels = c("not visited","visited")
+  )
+
+
+m  # Print the map
 ```
 
-```{r, echo=FALSE,eval=F}
-thumbnail("Apple", "images/apple.png", "https://en.wikipedia.org/wiki/Apple")
-thumbnail("Grape", "images/grape.png", "https://en.wikipedia.org/wiki/Grape")
-thumbnail("Peach", "images/peach.png", "https://en.wikipedia.org/wiki/Peach")
+```{r recharts, eval=F,echo=F,message=F,warning=F}
+library(recharts)
+
+
+## 省份地图
+eMap(provinceMapData, namevar=~city, datavar = ~value+val2, region="江苏",title="test")
 ```
 
-```{r}
+
+```{r REmap, results='asis', eval=F,echo=F,message=F,warning=F}
+library(REmap)
+remap.init()
+p = remap(demoC)
+## knitr展示
+knitrREmap(p,local=F)
+iconv(chinaIphone[,1],to="utf-8",from="gbk")->chinaIphone[,1]
+capital <- c("北京市","上海市","天津市","重庆市","哈尔滨"
+        ,"长春"
+    ,"沈阳"
+    ,"呼和浩特"
+    ,"石家庄"
+    ,"乌鲁木齐"
+    ,"兰州"
+    ,"西宁"
+    ,"西安"
+    ,"银川"
+    ,"郑州"
+    ,"济南"
+    ,"太原"
+    ,"合肥"
+    ,"武汉"
+    ,"长沙"
+    ,"南京"
+    ,"成都"
+    ,"贵阳"
+    ,"昆明"
+    ,"南宁"
+    ,"拉萨"
+    ,"杭州"
+    ,"南昌"
+    ,"广州"
+    ,"福州"
+    ,"台北"
+    ,"海口"
+    ,"香港"
+    ,"澳门"
+  )
+ #get_geo_position(capital)->capital.gps
+ 
+p = remap(demoC)
+## knitr展示
+knitrREmap(p,local=F)
+```
+
+```{r maptools_ggplot, echo=FALSE,eval=F,echo=F,message=F,warning=F}
+setwd("~/map/CHN_adm_rds/")
+library(maptools)
+library(ggplot2)
+library(plyr)
+library(REmap)
+#str.crs <- "+proj=longlat +ellps=clrk66"
+china_map <- readRDS("CHN_adm2.rds")
+#china_map[china_map$NAME_1=="Xinjiang Uygur",]->xinjiang
+
+#x <- china_map@data                          #读取行政信息
+#xs <- data.frame(x,id=seq(0:(nrow(x)-1))-1)          #含岛屿共925个形状
+read.table("~/map/CHN_adm_rds/city_visited.tab",sep="\t",quote ="")->city
+ifelse(city[,3]=="1","red","white")->col
+plot(china_map,col=col,main="visited cities in China",border="blue", lwd=0.2)
+
+china_map1 <- fortify(china_map)             #转化为数据框
+china_map_data <- join(china_map1, xs, type = "full")       #合并两个数据框
+pdf()
+p <- ggplot(yunnan_map_data, aes(x = long, y = lat))
+p <- p +
+  theme(               
+      panel.grid = element_blank(),
+      panel.background = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_blank(),
+      legend.position = "none"
+  )
+
+p + geom_polygon(aes(group = group,fill=id),colour="grey60")
+#cap.coords <- coordinates(china_map)
+
+dev.off()
+
+```
+
+```{r get_url,echo=F,message=F,warning=F,eval=F,echo=F,message=F,warning=F}
 library(RgoogleMaps)
 library(RCurl)
 library(XML)
+library(stringr)
 Start = Sys.time()
 day = 13
 skip = 0
@@ -28,22 +142,16 @@ pmurl = sapply(X=pmtotal,FUN=xmlGetAttr,name="href")
 pmcity = sapply(X=pmtotal,FUN=xmlValue)
 pmcity = gsub(pattern="[A-Z]",replacement="",x=pmcity)
 
-index = match(c("黄山","菏泽","九华山风景区","恩施州","黄冈","随州"),table=pmcity)
-
-pmcity = pmcity[-index]
-pmurl = pmurl[-index]
-
 read.csv("China.Cities.Location.Linux.csv")->China
-which(pmcity %in% China$city)->ind1
-which(China$city %in% pmcity)->ind2
+
+sapply(pmcity,function(x){which(str_detect(China$city,x))[1]})->tmp
+tmp[!is.na(tmp)]->ind2
+!is.na(tmp)->ind1
 
 result<-China[ind2,]
 
+#    name = tmp[grepl(pattern="name",x=tmp)]
 
-```
-
-
-```{r}
 pmurl[ind1]->pmurl
 pmcity[ind1]->pmcity
 
@@ -53,7 +161,7 @@ ii=0;
 for( i in pmurl)
 {
   ii<-ii+1
-  cat(paste("Get data for",result$city[ii],"... ...\n"))
+  cat(paste(ii," Get data for ",pmcity[ii],"  ",result$city[ii],"... ...\n"))
   cityweb = getURL(url=paste(website,i,sep=""),.encoding="UTF-8")
   cityweb = strsplit(x=cityweb,split="flashvalue")[[1]]
   cityweb = cityweb[grepl(pattern="set name",x=cityweb)]
@@ -89,11 +197,6 @@ for( i in pmurl)
   }
   data = rbind(data,cbind(city=as.vector(result$city[ii]),pm))
 }
-
-
-```
-
-```{r}
 lon = result[,3]
 lat = result[,2]
 
@@ -111,7 +214,7 @@ suppressWarnings(expr=PlotOnStaticMap(MyMap=tp.pm,lat=lat,lon=lon,pch=20,col=col
 title(main=paste(date,"全国",length(pm),"个主要城市PM2.5分布情况",sep=""))
 text.col = rgb(red=1,green=1,blue=1,alpha=0.9)
 text(x=210,y=-250,labels=paste("数据来源：",website,sep=""),cex=0.8,col=text.col)
-text(x=210,y=-230,labels="R语言  RgoogleMaps  @Conda",cex=0.8,col=text.col)
+text(x=210,y=-230,labels="R语言  RgoogleMaps",cex=0.8,col=text.col)
 Stop = Sys.time()
 Cost = Stop - Start
 cat(paste("\n\n\nIt cost",Cost,"minutes.\n"))
@@ -119,17 +222,4 @@ cat(paste("Gather",length(pm),"cities pm 2.5 data, and skip",skip,"city for inco
 
 ```
 
-
-
-```{r echo=FALSE}
-library(tmap)
-data(land)
-data(World)
-data(metro)
-tm_shape(World, bbox = "China") +
-    tm_polygons("MAP_COLORS", palette="Pastel2") +
-tm_shape(metro) +
-    tm_bubbles("pop2010", title.size = "Population") +
-    tm_text("name", size = "pop2010", legend.size.show = FALSE, root=8, size.lowerbound = .7, auto.placement = TRUE)
-```
 
