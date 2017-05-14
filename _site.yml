@@ -14,7 +14,7 @@ navbar:
       icon: fa-gear
       menu:
         - text: "Heading 1"
-        - text: "Page A"
+        - text: "People"
           href: page_a.html
         - text: "Page B"
           href: page_b.html
