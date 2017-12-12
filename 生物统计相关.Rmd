@@ -1,0 +1,7 @@
+---
+title: "生物统计相关"
+output: html_document
+---
+
+* [Leek, J. T., et al. (2010). "Tackling the widespread and critical impact of batch effects in high-throughput data." Nat Rev Genet 11(10): 733-739.](https://www.nature.com/articles/nrg2825)  
+    关于batch effect的经典文献

@@ -1,0 +1,14 @@
+---
+title: "Cancer Epigenomics"
+output: html_document
+---
+
+
+## reviews
+* [Timp, W. and A. P. Feinberg (2013). "Cancer as a dysregulated epigenome allowing cellular growth advantage at the expense of the host." Nat Rev Cancer 13(7): 497-510.](https://www.nature.com/articles/nrc3486)  
+    总结了与癌症相关的各种类型的表观基因组的改变
+* [Feinberg, A. P., et al. (2016). "Epigenetic modulators, modifiers and mediators in cancer aetiology and progression." Nat Rev Genet 17(5): 284-299.](https://www.nature.com/articles/nrg.2016.13)  
+    以表观遗传学的角度对与肿瘤发生相关的基因进行分类
+
+
+

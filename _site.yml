@@ -1,36 +1,23 @@
-name: "my-website"
+name: "lab website"
 output_dir: "."
 navbar:
-  title: "Xin Li's Website"
+  title: "文献整理"
   type: inverse
   left:
-    - text: "Home"
+    - text: "实验室主页"
       icon: fa-home
-      href: index.html
-    - text: "About"
-      icon: fa-info
-      href: about.html
-    - text: "More"
-      icon: fa-gear
-      menu:
-        - text: "Heading 1"
-        - text: "People"
-          href: page_a.html
-        - text: "Page B"
-          href: page_b.html
-        - text: "---------"
-        - text: "Heading 2"
-        - text: "Page C"
-          href: page_c.html
-        - text: "Page D"
-          href: page_d.html
-  right:
-    - icon: fa-question fa-lg
-      href: https://example.com
+      href: http://www.lixin.gdn/
+    #- text: "发表论文"
+    #  icon: fa-info
+    #  href: publication.html
+
+  #right:
+  #  - icon: fa-question fa-lg
+  #    href: https://example.com
 output:
   html_document:
     theme: cosmo
     highlight: textmate
     include:
-      after_body: footer.html
+    after_body: footer.html
     css: styles.css
