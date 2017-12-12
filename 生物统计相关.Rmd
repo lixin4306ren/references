@@ -1,7 +1,10 @@
 ---
-title: "生物统计相关"
+title: "生物信息学相关"
 output: html_document
 ---
 
+## reviews
 * [Leek, J. T., et al. (2010). "Tackling the widespread and critical impact of batch effects in high-throughput data." Nat Rev Genet 11(10): 733-739.](https://www.nature.com/articles/nrg2825)  
     关于batch effect的经典文献
+* [Shafi, A., et al. (2017). "A survey of the approaches for identifying differential methylation using bisulfite sequencing data." Brief Bioinform.](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbx013/3064341)  
+    比较全面的关于DMRs identification方法的综述

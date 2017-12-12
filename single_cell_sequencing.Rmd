@@ -3,3 +3,6 @@ title: "Single Cell Sequencing"
 output: html_document
 ---
 ## reviews
+* [Kelsey, G., et al. (2017). "Single-cell epigenomics: Recording the past and predicting the future." Science 358(6359): 69-75.](http://science.sciencemag.org/content/358/6359/69)<br>
+* [Macaulay, I. C., et al. (2017). "Single-Cell Multiomics: Multiple Measurements from Single Cells." Trends Genet 33(2): 155-168.](http://www.sciencedirect.com/science/article/pii/S016895251630169X?via%3Dihub)<br>
+* [Baslan, T. and J. Hicks (2017). "Unravelling biology and shifting paradigms in cancer with single-cell sequencing." Nat Rev Cancer 17(9): 557-569.](https://www.nature.com/articles/nrc.2017.58)<br>
