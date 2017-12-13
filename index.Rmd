@@ -11,6 +11,36 @@ title: ""
 ## [生物信息学相关](生物统计相关.html)<br><br>
 
 
+```{r timevis,echo=F,message=F,warning=F,eval=T}
+library(timevis)
+
+data <- data.frame(
+  id      = 1:2,
+  content = c("Item one", "Item two"),
+  start   = c("2017-12-10","2017-12-10"),
+  end     = c("2017-12-13", "2017-12-14")
+)
+
+timevis(data)
+```
+
+```{r gantt,  echo=F,message=F,warning=F,eval=F}
+library("DiagrammeR")
+mermaid("gantt
+dateFormat  YYYY-MM-DD
+title this is title
+Section A
+Planning           :done,a1, 2017-12-01, 10d
+Data processing    :crit,active,after a1  , 30d
+Add another diagram       :crit, done,after a1  , 10d
+Section B
+tast1 :b1,2017-12-01,10d
+tast2 :b2,after b1, 30d
+section C
+Describe gantt syntax               :active, after b2, 3d
+Add gantt diagram to demo page      :after b2, 20h
+")
+```
 
 
 
