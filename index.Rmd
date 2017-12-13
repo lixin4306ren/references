@@ -11,7 +11,7 @@ title: ""
 ## [生物信息学相关](生物统计相关.html)<br><br>
 
 
-```{r timevis,echo=F,message=F,warning=F,eval=T}
+```{r timevis,echo=F,message=F,warning=F,eval=F}
 library(timevis)
 
 data <- data.frame(
@@ -24,21 +24,21 @@ data <- data.frame(
 timevis(data)
 ```
 
-```{r gantt,  echo=F,message=F,warning=F,eval=F}
+```{r gantt,  echo=F,message=F,warning=F,eval=T}
 library("DiagrammeR")
 mermaid("gantt
-dateFormat  YYYY-MM-DD
+dateFormat  YYYY-MM-DD-HH-mm
 title this is title
 Section A
-Planning           :done,a1, 2017-12-01, 10d
-Data processing    :crit,active,after a1  , 30d
-Add another diagram       :crit, done,after a1  , 10d
+#Planning           :done,a1, 2017-12-13, 1.5h
+#Data processing    :crit,active,after a1  , 0.5
+#Add another diagram       :crit, done,after a1  , 1h
 Section B
-tast1 :b1,2017-12-01,10d
-tast2 :b2,after b1, 30d
-section C
-Describe gantt syntax               :active, after b2, 3d
-Add gantt diagram to demo page      :after b2, 20h
+tast1 :b1,2017-12-13-01-15,2017-12-13-01-20
+#tast2 :b2,2017-12-13, 1h
+#section C
+#Describe gantt syntax               :active, after b2, 3m
+#Add gantt diagram to demo page      :after b2, 2h
 ")
 ```
 

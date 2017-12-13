@@ -23,10 +23,13 @@
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<link href="site_libs/vis-4.16.1/vis.min.css" rel="stylesheet" />
-<script src="site_libs/vis-4.16.1/vis.min.js"></script>
-<link href="site_libs/timeline-0.4/timevis.css" rel="stylesheet" />
-<script src="site_libs/timevis-binding-0.4/timevis.js"></script>
+<script src="site_libs/d3-3.3.8/d3.min.js"></script>
+<script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/chromatography-0.1/chromatography.js"></script>
+<script src="site_libs/DiagrammeR-binding-0.9.2/DiagrammeR.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -222,13 +225,8 @@ $(document).ready(function () {
 </div>
 <div class="section level2">
 <h2><a href="生物统计相关.html">生物信息学相关</a><br><br></h2>
-<div id="htmlwidget-31e13356dd5359824dc1" class="timevis html-widget" style="width:672px;height:480px;">
-<div class="btn-group zoom-menu">
-<button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
-<button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
-</div>
-</div>
-<script type="application/json" data-for="htmlwidget-31e13356dd5359824dc1">{"x":{"items":[{"id":"1","content":"Item one","start":"2017-12-10","end":"2017-12-13"},{"id":"2","content":"Item two","start":"2017-12-10","end":"2017-12-14"}],"groups":null,"showZoom":true,"zoomFactor":0.5,"fit":true,"options":[],"height":null,"api":[]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f86412501024d4e83381" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f86412501024d4e83381">{"x":{"diagram":"gantt\ndateFormat  YYYY-MM-DD-HH-mm\ntitle this is title\nSection A\n#Planning           :done,a1, 2017-12-13, 1.5h\n#Data processing    :crit,active,after a1  , 0.5\n#Add another diagram       :crit, done,after a1  , 1h\nSection B\ntast1 :b1,2017-12-13-01-15,2017-12-13-01-20\n#tast2 :b2,2017-12-13, 1h\n#section C\n#Describe gantt syntax               :active, after b2, 3m\n#Add gantt diagram to demo page      :after b2, 2h\n"},"evals":[],"jsHooks":[]}</script>
 </div>
 
 
