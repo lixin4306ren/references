@@ -6,6 +6,7 @@ title: ""
 
 ## [Cancer Epigenomics](cancer_epigenomics.html)<br><br>
 ## [Cancer Genomics](cancer_genomics.html)<br><br>
+## [Epigenetic Editing](epi_editing.html)<br><br>
 ## [Single Cell Sequencing](single_cell_sequencing.html)<br><br>
 ## [DNA Methylation and hydroxymethylation](DNA_methylation.html)<br><br>
 ## [生物信息学相关](生物统计相关.html)<br><br>
@@ -24,7 +25,7 @@ data <- data.frame(
 timevis(data)
 ```
 
-```{r gantt,  echo=F,message=F,warning=F,eval=T}
+```{r gantt,  echo=F,message=F,warning=F,eval=F}
 library("DiagrammeR")
 mermaid("gantt
 dateFormat  YYYY-MM-DD-HH-mm

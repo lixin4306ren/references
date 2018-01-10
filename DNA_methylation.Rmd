@@ -6,6 +6,9 @@ output: html_document
 ## reviews
 * [Wu, H. and Y. Zhang (2014). "Reversing DNA methylation: mechanisms, genomics, and biological functions." Cell 156(1-2): 45-68.](http://www.cell.com/cell/fulltext/S0092-8674(13)01588-2)
 * [Wu, H. and Y. Zhang (2015). "Charting oxidized methylcytosines at base resolution." Nat Struct Mol Biol 22(9): 656-661.](https://www.nature.com/articles/nsmb.3071)
+* [Smith, Z. D. and A. Meissner (2013). "DNA methylation: roles in mammalian development." Nat Rev Genet 14(3): 204-220](https://www.nature.com/articles/nrg3354)  
+* [Jones, P. A. (2012). "Functions of DNA methylation: islands, start sites, gene bodies and beyond." Nat Rev Genet 13(7): 484-492](https://www.nature.com/articles/nrg3230)   
+
 
 ## 5hmC genome-wide studies at single-base level
 * [Yu, M., et al. (2012). "Base-resolution analysis of 5-hydroxymethylcytosine in the mammalian genome." Cell 149(6): 1368-1380.](https://www.sciencedirect.com/science/article/pii/S009286741200534X)  
