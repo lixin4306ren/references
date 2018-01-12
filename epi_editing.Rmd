@@ -6,7 +6,6 @@ output: html_document
 ## reviews
 * [Kungulovski, G. and A. Jeltsch (2016). "Epigenome Editing: State of the Art, Concepts, and Perspectives." Trends Genet 32(2): 101-113.](http://www.cell.com/trends/genetics/fulltext/S0168-9525(15)00212-7?_returnURL=http%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0168952515002127%3Fshowall%3Dtrue)  
 * [Keung, A. J., et al. (2015). "Chromatin regulation at the frontier of synthetic biology." Nat Rev Genet 16(3): 159-171.](https://www.nature.com/articles/nrg3900)
-
 * [Enriquez, P. (2016). "CRISPR-Mediated Epigenome Editing." Yale J Biol Med 89(4): 471-486](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2842472)
 
 ## case studies
