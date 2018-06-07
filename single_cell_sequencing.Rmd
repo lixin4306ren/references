@@ -7,6 +7,9 @@ output: html_document
 * [Macaulay, I. C., et al. (2017). "Single-Cell Multiomics: Multiple Measurements from Single Cells." Trends Genet 33(2): 155-168.](http://www.sciencedirect.com/science/article/pii/S016895251630169X?via%3Dihub)<br>
 * [Baslan, T. and J. Hicks (2017). "Unravelling biology and shifting paradigms in cancer with single-cell sequencing." Nat Rev Cancer 17(9): 557-569.](https://www.nature.com/articles/nrc.2017.58)<br>
 
+## 方法学reviews
+* [Chen, J., et al. (2018). "Constructing cell lineages from single-cell transcriptomes." Mol Aspects Med 59: 95-113.](https://www.sciencedirect.com/science/article/pii/S0098299717300523?via%3Dihub)
+
 ## single cell相关学习资料
 * [github awesome-single-cell](https://github.com/seandavi/awesome-single-cell)
-* [scRNA分析教程](https://hemberg-lab.github.io/scRNA.seq.course/)
+* [scRNA-seq分析教程](https://hemberg-lab.github.io/scRNA.seq.course/)
