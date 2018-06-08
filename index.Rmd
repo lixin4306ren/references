@@ -9,6 +9,7 @@ title: ""
 ## [Epigenetic Editing](epi_editing.html)<br><br>
 ## [Single Cell Sequencing](single_cell_sequencing.html)<br><br>
 ## [DNA Methylation and hydroxymethylation](DNA_methylation.html)<br><br>
+## [nanopore三代测序](nanopore.html)<br><br>
 ## [生物信息学相关](生物统计相关.html)<br><br>
 
 

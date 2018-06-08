@@ -1,0 +1,7 @@
+---
+title: "nanopore三代测序相关"
+output: html_document
+---
+
+## nanopore直接测定DNA修饰
+[Simpson, J. T., et al. (2017). "Detecting DNA cytosine methylation using nanopore sequencing." Nat Methods 14(4): 407-410.](https://www.nature.com/articles/nmeth.4184)
