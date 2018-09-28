@@ -4,6 +4,7 @@ output: html_document
 ---
 
 ## reviews
+* [Luo, C., et al. (2018). "Dynamic DNA methylation: In the right place at the right time." Science 361: 1336-1340.](http://science.sciencemag.org/content/361/6409/1336)
 * [Wu, X. and Y. Zhang (2017). "TET-mediated active DNA demethylation: mechanism, function and beyond." Nat Rev Genet 18(9): 517-534.](https://www.nature.com/articles/nrg.2017.33)
 * [Wu, H. and Y. Zhang (2015). "Charting oxidized methylcytosines at base resolution." Nat Struct Mol Biol 22(9): 656-661.](https://www.nature.com/articles/nsmb.3071)
 * [Wu, H. and Y. Zhang (2014). "Reversing DNA methylation: mechanisms, genomics, and biological functions." Cell 156(1-2): 45-68.](http://www.cell.com/cell/fulltext/S0092-8674(13)01588-2)
