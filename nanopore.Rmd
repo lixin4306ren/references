@@ -5,3 +5,6 @@ output: html_document
 
 ## nanopore直接测定DNA修饰
 [Simpson, J. T., et al. (2017). "Detecting DNA cytosine methylation using nanopore sequencing." Nat Methods 14(4): 407-410.](https://www.nature.com/articles/nmeth.4184)
+
+## nanopore RNA直接测序
+[Garalde, D. R., et al. (2018). "Highly parallel direct RNA sequencing on an array of nanopores." Nat Methods 15(3): 201-206.](https://www.nature.com/articles/nmeth.4577)

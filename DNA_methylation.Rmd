@@ -13,6 +13,7 @@ output: html_document
 
 
 ## 5hmC genome-wide studies at single-base level
+* [Schutsky, E. K., et al. (2018). "Nondestructive, base-resolution sequencing of 5-hydroxymethylcytosine using a DNA deaminase." Nat Biotechnol.](https://www.nature.com/articles/nbt.4204)
 * [Wen, L., et al. (2014). "Whole-genome analysis of 5-hydroxymethylcytosine and 5-methylcytosine at base resolution in the human brain." Genome Biol 15(3): R49.](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-3-r49)
 * [Yu, M., et al. (2012). "Base-resolution analysis of 5-hydroxymethylcytosine in the mammalian genome." Cell 149(6): 1368-1380.](https://www.sciencedirect.com/science/article/pii/S009286741200534X)  
     TAB-seq method
