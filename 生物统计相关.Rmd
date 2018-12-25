@@ -3,11 +3,11 @@ title: "生物信息学相关"
 output: html_document
 ---
 
-## reviews
 * [Leek, J. T., et al. (2010). "Tackling the widespread and critical impact of batch effects in high-throughput data." Nat Rev Genet 11(10): 733-739.](https://www.nature.com/articles/nrg2825)  
     关于batch effect的经典文献
 * [Shafi, A., et al. (2017). "A survey of the approaches for identifying differential methylation using bisulfite sequencing data." Brief Bioinform.](https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbx013/3064341)  
     比较全面的关于DMRs identification方法的综述
 * [Steinhauser, S., et al. (2016). "A comprehensive comparison of tools for differential ChIP-seq analysis." Brief Bioinform 17(6): 953-966](https://academic.oup.com/bib/article/17/6/953/2453197)  
     比较找differential chip peaks的方法综述  
-    
+* [Sahraeian, S. M. E., et al. (2017). "Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis." Nat Commun 8(1): 59.](https://www.nature.com/articles/s41467-017-00050-4)  
+    比较RNA-Seq的相关软件和流程总结  

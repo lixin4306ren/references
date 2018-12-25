@@ -10,6 +10,11 @@ output: html_document
 ## 方法学reviews
 * [Chen, J., et al. (2018). "Constructing cell lineages from single-cell transcriptomes." Mol Aspects Med 59: 95-113.](https://www.sciencedirect.com/science/article/pii/S0098299717300523?via%3Dihub)
 
+## 工具软件比较
+* [Freytag, S., et al. (2018). "Comparison of clustering tools in R for medium-sized 10x Genomics single-cell RNA-sequencing data." F1000Res 7: 1297.](https://f1000research.com/articles/7-1297/v2)<br>
+    benchmark各个软件的clustering效果  
+
 ## single cell相关学习资料
 * [github awesome-single-cell](https://github.com/seandavi/awesome-single-cell)
 * [scRNA-seq分析教程](https://hemberg-lab.github.io/scRNA.seq.course/)
+* [f1000research上的scRNA-seq workflow](https://f1000research.com/articles/5-2122/v1)
