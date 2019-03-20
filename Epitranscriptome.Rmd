@@ -1,0 +1,7 @@
+---
+title: "Epitranscriptome"
+output: html_document
+---
+
+## Histone modification and m6A
+* [Huang, H., et al. (2019). "Histone H3 trimethylation at lysine 36 guides m(6)A RNA modification co-transcriptionally." Nature.](https://www.nature.com/articles/s41586-019-1016-7)
