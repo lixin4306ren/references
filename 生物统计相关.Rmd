@@ -13,17 +13,19 @@ output: html_document
     比较RNA-Seq的相关软件和流程总结  
     
 
-## 生物信息学习资料
+## 生物信息课程
 * [2018 bioconductor workshop](https://bioconductor.github.io/BiocWorkshops/)
-* [Rafael Irizarry Biomedical Data Science课程](http://genomicsclass.github.io/book/) [视频:](http://rafalab.github.io/pages/harvardx.html)
+* [Rafael Irizarry Biomedical Data Science课程](http://genomicsclass.github.io/book/)   [相关视频资料](http://rafalab.github.io/pages/harvardx.html)
 
 ## R语言相关
 ### 入门
-* [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
-### 进阶
-* [R for Data Science](https://r4ds.had.co.nz/)
-* [Advanced Statistical Computing](https://bookdown.org/rdpeng/advstatcomp/)
-### 高级
-* [Efficient R programming](https://bookdown.org/csgillespie/efficientR/)
-* [Advanced R](http://adv-r.had.co.nz/)
+* [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)  
+
+### 进阶  
+* [R for Data Science](https://r4ds.had.co.nz/)  
+* [Advanced Statistical Computing](https://bookdown.org/rdpeng/advstatcomp/)  
+
+### 高级  
+* [Efficient R programming](https://bookdown.org/csgillespie/efficientR/)  
+* [Advanced R](http://adv-r.had.co.nz/)  
 
