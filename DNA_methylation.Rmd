@@ -21,4 +21,15 @@ output: html_document
 * [Booth, M. J., et al. (2012). "Quantitative sequencing of 5-methylcytosine and 5-hydroxymethylcytosine at single-base resolution." Science 336(6083): 934-937.](http://science.sciencemag.org/content/336/6083/934.full)  
     oxBS-seq method
     
+## case studies
+* [Rinaldi, L., et al. (2016). "Dnmt3a and Dnmt3b Associate with Enhancers to Regulate Human Epidermal Stem Cell Homeostasis." Cell stem cell 19(4): 491-501.](https://www.sciencedirect.com/science/article/pii/S1934590916301953?via%3Dihub)
 
+这篇文章证明5hmC除了作为5mC的代谢中间产物，其本身也是有重要功能的biomark
+
+* [Spruijt, C. G., et al. (2013). "Dynamic readers for 5-(hydroxy)methylcytosine and its oxidized derivatives." Cell 152(5): 1146-1159.](https://www.cell.com/abstract/S0092-8674%2813%2900152-9)
+
+质谱的方法鉴定出一批5hmC的reader
+
+* [Iurlaro, M., et al. (2013). "A screen for hydroxymethylcytosine and formylcytosine binding proteins suggests functions in transcription and chromatin regulation." Genome Biol 14(10): R119.](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-10-r119)
+
+promoter序列screening的方法鉴定5hmC和5fC的reader，只选了特定的2个promoter并且是用PCR的方法生产不同种类修饰的序列，和in vivo状态不符

@@ -11,3 +11,19 @@ output: html_document
     比较找differential chip peaks的方法综述  
 * [Sahraeian, S. M. E., et al. (2017). "Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis." Nat Commun 8(1): 59.](https://www.nature.com/articles/s41467-017-00050-4)  
     比较RNA-Seq的相关软件和流程总结  
+    
+
+## 生物信息学习资料
+* [2018 bioconductor workshop](https://bioconductor.github.io/BiocWorkshops/)
+* [Rafael Irizarry Biomedical Data Science课程](http://genomicsclass.github.io/book/) [视频:](http://rafalab.github.io/pages/harvardx.html)
+
+## R语言相关
+### 入门
+* [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+### 进阶
+* [R for Data Science](https://r4ds.had.co.nz/)
+* [Advanced Statistical Computing](https://bookdown.org/rdpeng/advstatcomp/)
+### 高级
+* [Efficient R programming](https://bookdown.org/csgillespie/efficientR/)
+* [Advanced R](http://adv-r.had.co.nz/)
+
