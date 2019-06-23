@@ -29,3 +29,5 @@ output: html_document
 * [Efficient R programming](https://bookdown.org/csgillespie/efficientR/)  
 * [Advanced R](http://adv-r.had.co.nz/)  
 
+## Linux命令行
+* [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
