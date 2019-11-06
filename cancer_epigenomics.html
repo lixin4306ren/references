@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -86,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -247,18 +247,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -313,6 +301,7 @@ $(document).ready(function () {
 <div id="reviews" class="section level2">
 <h2>reviews</h2>
 <ul>
+<li><a href="https://www.nature.com/articles/s41580-019-0143-1">Michalak, E. M., et al. (2019). “The roles of DNA, RNA and histone methylation in ageing and cancer.” Nature Reviews: Molecular Cell Biology 20(10): 573-589.</a></li>
 <li><a href="http://www.nejm.org/doi/10.1056/NEJMra1402513">Feinberg, A. P. (2018). “The Key Role of Epigenetics in Human Disease Prevention and Mitigation.” N Engl J Med 378(14): 1323-1334.</a></li>
 <li><a href="https://www.nature.com/articles/nrg.2016.13">Feinberg, A. P., et al. (2016). “Epigenetic modulators, modifiers and mediators in cancer aetiology and progression.” Nat Rev Genet 17(5): 284-299.</a><br />
 以表观遗传学的角度对与肿瘤发生相关的基因进行分类</li>
@@ -340,6 +329,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

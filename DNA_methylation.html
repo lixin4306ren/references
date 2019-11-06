@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -86,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -247,18 +247,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -313,6 +301,10 @@ $(document).ready(function () {
 <div id="reviews" class="section level2">
 <h2>reviews</h2>
 <ul>
+<li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31268-6/fulltext">Cedar, H. and Dor Y. (2019) “Principles of DNA methylation and their implications for biology and medicine.” Lancet 392: 777–86</a></li>
+<li><a href="https://www.nature.com/articles/s41580-019-0159-6">Greenberg, M. V. C. and D. Bourc’his (2019). “The diverse roles of DNA methylation in mammalian development and disease.” Nature Reviews: Molecular Cell Biology 20(10): 590-607.</a></li>
+<li><a href="https://www.nature.com/articles/s41580-019-0143-1">Michalak, E. M., et al. (2019). “The roles of DNA, RNA and histone methylation in ageing and cancer.” Nature Reviews: Molecular Cell Biology 20(10): 573-589.</a></li>
+<li><a href="https://www.nature.com/articles/s41580-019-0151-1">Jambhekar, A., et al. (2019). “Roles and regulation of histone methylation in animal development.” Nature Reviews: Molecular Cell Biology 20(10): 625-641.</a></li>
 <li><a href="https://www.nature.com/articles/nrg.2017.80">Lyko, F. (2018). “The DNA methyltransferase family: a versatile toolkit for epigenetic regulation.” Nat Rev Genet 19(2): 81-92.</a></li>
 <li><a href="http://science.sciencemag.org/content/361/6409/1336">Luo, C., et al. (2018). “Dynamic DNA methylation: In the right place at the right time.” Science 361: 1336-1340.</a></li>
 <li><a href="https://www.nature.com/articles/nrg.2017.33">Wu, X. and Y. Zhang (2017). “TET-mediated active DNA demethylation: mechanism, function and beyond.” Nat Rev Genet 18(9): 517-534.</a></li>
@@ -367,6 +359,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

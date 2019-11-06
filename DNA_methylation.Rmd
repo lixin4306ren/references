@@ -4,6 +4,10 @@ output: html_document
 ---
 
 ## reviews
+* [Cedar, H. and Dor Y. (2019) "Principles of DNA methylation and their implications for biology and medicine." Lancet 392: 777–86](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31268-6/fulltext)
+* [Greenberg, M. V. C. and D. Bourc'his (2019). "The diverse roles of DNA methylation in mammalian development and disease." Nature Reviews: Molecular Cell Biology 20(10): 590-607.](https://www.nature.com/articles/s41580-019-0159-6)
+* [Michalak, E. M., et al. (2019). "The roles of DNA, RNA and histone methylation in ageing and cancer." Nature Reviews: Molecular Cell Biology 20(10): 573-589.](https://www.nature.com/articles/s41580-019-0143-1)
+* [Jambhekar, A., et al. (2019). "Roles and regulation of histone methylation in animal development." Nature Reviews: Molecular Cell Biology 20(10): 625-641.](https://www.nature.com/articles/s41580-019-0151-1)
 * [Lyko, F. (2018). "The DNA methyltransferase family: a versatile toolkit for epigenetic regulation." Nat Rev Genet 19(2): 81-92.](https://www.nature.com/articles/nrg.2017.80)
 * [Luo, C., et al. (2018). "Dynamic DNA methylation: In the right place at the right time." Science 361: 1336-1340.](http://science.sciencemag.org/content/361/6409/1336)
 * [Wu, X. and Y. Zhang (2017). "TET-mediated active DNA demethylation: mechanism, function and beyond." Nat Rev Genet 18(9): 517-534.](https://www.nature.com/articles/nrg.2017.33)
