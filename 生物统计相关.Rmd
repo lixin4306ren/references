@@ -11,9 +11,10 @@ output: html_document
     比较找differential chip peaks的方法综述  
 * [Sahraeian, S. M. E., et al. (2017). "Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis." Nat Commun 8(1): 59.](https://www.nature.com/articles/s41467-017-00050-4)  
     比较RNA-Seq的相关软件和流程总结  
-* [Van Den Berge, K., et al. (2019). "RNA sequencing data: hitchhiker's guide to expression analysis."](https://www.annualreviews.org/doi/full/10.1146/annurev-biodatasci-072018-021255)
+* [Van Den Berge, K., et al. (2019). "RNA sequencing data: hitchhiker's guide to expression analysis."](https://www.annualreviews.org/doi/full/10.1146/annurev-biodatasci-072018-021255)  
     Annual review的RNA-seq综述  
-    
+* [Kryuchkova-Mostacci, Nadezda, and Marc Robinson-Rechavi. "A benchmark of gene expression tissue-specificity metrics." Briefings in bioinformatics 18.2 (2017): 205-214.](https://academic.oup.com/bib/article/18/2/205/2562739?login=true)  
+    benchmark度量tissue specificity的指标  
 
 ## 生物信息课程
 * [2018 bioconductor workshop](https://bioconductor.github.io/BiocWorkshops/)

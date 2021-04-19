@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -235,6 +234,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -299,34 +299,38 @@ $(document).ready(function () {
 
 
 <ul>
-<li><a href="https://www.nature.com/articles/nrg2825">Leek, J. T., et al. (2010). “Tackling the widespread and critical impact of batch effects in high-throughput data.” Nat Rev Genet 11(10): 733-739.</a><br />
+<li><a href="https://www.nature.com/articles/nrg2825">Leek, J. T., et al. (2010). &quot;Tackling the widespread and critical impact of batch effects in high-throughput data.&quot; Nat Rev Genet 11(10): 733-739.</a><br />
 关于batch effect的经典文献</li>
-<li><a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbx013/3064341">Shafi, A., et al. (2017). “A survey of the approaches for identifying differential methylation using bisulfite sequencing data.” Brief Bioinform.</a><br />
+<li><a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbx013/3064341">Shafi, A., et al. (2017). &quot;A survey of the approaches for identifying differential methylation using bisulfite sequencing data.&quot; Brief Bioinform.</a><br />
 比较全面的关于DMRs identification方法的综述</li>
-<li><a href="https://academic.oup.com/bib/article/17/6/953/2453197">Steinhauser, S., et al. (2016). “A comprehensive comparison of tools for differential ChIP-seq analysis.” Brief Bioinform 17(6): 953-966</a><br />
+<li><a href="https://academic.oup.com/bib/article/17/6/953/2453197">Steinhauser, S., et al. (2016). &quot;A comprehensive comparison of tools for differential ChIP-seq analysis.&quot; Brief Bioinform 17(6): 953-966</a><br />
 比较找differential chip peaks的方法综述<br />
 </li>
-<li><a href="https://www.nature.com/articles/s41467-017-00050-4">Sahraeian, S. M. E., et al. (2017). “Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis.” Nat Commun 8(1): 59.</a><br />
+<li><a href="https://www.nature.com/articles/s41467-017-00050-4">Sahraeian, S. M. E., et al. (2017). &quot;Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis.&quot; Nat Commun 8(1): 59.</a><br />
 比较RNA-Seq的相关软件和流程总结<br />
 </li>
-<li><a href="https://www.annualreviews.org/doi/full/10.1146/annurev-biodatasci-072018-021255">Van Den Berge, K., et al. (2019). “RNA sequencing data: hitchhiker’s guide to expression analysis.”</a> Annual review的RNA-seq综述</li>
+<li><a href="https://www.annualreviews.org/doi/full/10.1146/annurev-biodatasci-072018-021255">Van Den Berge, K., et al. (2019). &quot;RNA sequencing data: hitchhiker's guide to expression analysis.&quot;</a><br />
+Annual review的RNA-seq综述<br />
+</li>
+<li><a href="https://academic.oup.com/bib/article/18/2/205/2562739?login=true">Kryuchkova-Mostacci, Nadezda, and Marc Robinson-Rechavi. &quot;A benchmark of gene expression tissue-specificity metrics.&quot; Briefings in bioinformatics 18.2 (2017): 205-214.</a><br />
+benchmark度量tissue specificity的指标</li>
 </ul>
-<div class="section level2">
+<div id="生物信息课程" class="section level2">
 <h2>生物信息课程</h2>
 <ul>
 <li><a href="https://bioconductor.github.io/BiocWorkshops/">2018 bioconductor workshop</a></li>
 <li><a href="http://genomicsclass.github.io/book/">Rafael Irizarry Biomedical Data Science课程</a> <a href="http://rafalab.github.io/pages/harvardx.html">相关视频资料</a></li>
 </ul>
 </div>
-<div id="r" class="section level2">
+<div id="r语言相关" class="section level2">
 <h2>R语言相关</h2>
-<div class="section level3">
+<div id="入门" class="section level3">
 <h3>入门</h3>
 <ul>
 <li><a href="https://bookdown.org/rdpeng/rprogdatascience/">R Programming for Data Science</a></li>
 </ul>
 </div>
-<div class="section level3">
+<div id="进阶" class="section level3">
 <h3>进阶</h3>
 <ul>
 <li><a href="https://r4ds.had.co.nz/">R for Data Science</a><br />
@@ -334,7 +338,7 @@ $(document).ready(function () {
 <li><a href="https://bookdown.org/rdpeng/advstatcomp/">Advanced Statistical Computing</a></li>
 </ul>
 </div>
-<div class="section level3">
+<div id="高级" class="section level3">
 <h3>高级</h3>
 <ul>
 <li><a href="https://bookdown.org/csgillespie/efficientR/">Efficient R programming</a><br />
@@ -343,15 +347,15 @@ $(document).ready(function () {
 </ul>
 </div>
 </div>
-<div id="linux" class="section level2">
+<div id="linux命令行" class="section level2">
 <h2>Linux命令行</h2>
 <ul>
 <li><a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md">命令行的艺术</a></li>
 </ul>
 </div>
-<div class="section level2">
+<div id="统计学相关" class="section level2">
 <h2>统计学相关</h2>
-<div id="-1" class="section level3">
+<div id="入门-1" class="section level3">
 <h3>入门</h3>
 <ul>
 <li>《统计建模与R软件》，作者: 薛毅</li>
