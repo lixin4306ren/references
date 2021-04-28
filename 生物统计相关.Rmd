@@ -17,6 +17,7 @@ output: html_document
     benchmark度量tissue specificity的指标  
 
 ## 生物信息课程
+* [Bioinformatics Training at the Harvard Chan Bioinformatics Core](https://hbctraining.github.io/main/)
 * [2018 bioconductor workshop](https://bioconductor.github.io/BiocWorkshops/)
 * [Rafael Irizarry Biomedical Data Science课程](http://genomicsclass.github.io/book/)   [相关视频资料](http://rafalab.github.io/pages/harvardx.html)
 
