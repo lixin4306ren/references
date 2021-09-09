@@ -13,24 +13,38 @@
 
 <title>Epigenetic Editing</title>
 
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -43,32 +57,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -79,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +84,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +118,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +130,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -183,10 +141,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,7 +169,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -289,7 +259,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -301,20 +271,20 @@ $(document).ready(function () {
 <div id="reviews" class="section level2">
 <h2>reviews</h2>
 <ul>
-<li><a href="https://www.nature.com/articles/s41467-018-04252-2">Adli M. &quot;The CRISPR tool kit for genome editing and beyond&quot;. Nature communications, 2018, 9(1): 1-13.</a></li>
-<li><a href="http://www.cell.com/trends/genetics/fulltext/S0168-9525(15)00212-7?_returnURL=http%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0168952515002127%3Fshowall%3Dtrue">Kungulovski, G. and A. Jeltsch (2016). &quot;Epigenome Editing: State of the Art, Concepts, and Perspectives.&quot; Trends Genet 32(2): 101-113.</a><br />
+<li><a href="https://www.nature.com/articles/s41467-018-04252-2">Adli M. “The CRISPR tool kit for genome editing and beyond”. Nature communications, 2018, 9(1): 1-13.</a></li>
+<li><a href="http://www.cell.com/trends/genetics/fulltext/S0168-9525(15)00212-7?_returnURL=http%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0168952515002127%3Fshowall%3Dtrue">Kungulovski, G. and A. Jeltsch (2016). “Epigenome Editing: State of the Art, Concepts, and Perspectives.” Trends Genet 32(2): 101-113.</a><br />
 </li>
-<li><a href="https://www.nature.com/articles/nrg3900">Keung, A. J., et al. (2015). &quot;Chromatin regulation at the frontier of synthetic biology.&quot; Nat Rev Genet 16(3): 159-171.</a></li>
-<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2842472">Enriquez, P. (2016). &quot;CRISPR-Mediated Epigenome Editing.&quot; Yale J Biol Med 89(4): 471-486</a></li>
+<li><a href="https://www.nature.com/articles/nrg3900">Keung, A. J., et al. (2015). “Chromatin regulation at the frontier of synthetic biology.” Nat Rev Genet 16(3): 159-171.</a></li>
+<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2842472">Enriquez, P. (2016). “CRISPR-Mediated Epigenome Editing.” Yale J Biol Med 89(4): 471-486</a></li>
 </ul>
 </div>
 <div id="case-studies" class="section level2">
 <h2>case studies</h2>
 <ul>
-<li><p><a href="http://www.cell.com/cell/fulltext/S0092-8674(18)30049-7">Liu, X. S., et al. (2018). &quot;Rescue of Fragile X Syndrome Neurons by DNA Methylation Editing of the FMR1 Gene.&quot; Cell 172(5): 979-992 e976</a></p></li>
-<li><p><a href="http://www.cell.com/cell/fulltext/S0092-8674(16)31153-9">Liu, X. S., et al. (2016). &quot;Editing DNA Methylation in the Mammalian Genome.&quot; Cell 167(1): 233-247 e217</a></p></li>
-<li><p><a href="https://academic.oup.com/nar/article/45/4/1703/2605790">Stepper, P., et al. (2016). &quot;Efficient targeted DNA methylation with chimeric dCas9-Dnmt3a-Dnmt3L methyltransferase.&quot; Nucleic Acids Res.</a></p></li>
-<li><p><a href="https://www.nature.com/articles/nbt.3199">Hilton, I. B., et al. (2015). &quot;Epigenome editing by a CRISPR-Cas9-based acetyltransferase activates genes from promoters and enhancers.&quot; Nat Biotechnol 33(5): 510-517.</a></p></li>
+<li><p><a href="http://www.cell.com/cell/fulltext/S0092-8674(18)30049-7">Liu, X. S., et al. (2018). “Rescue of Fragile X Syndrome Neurons by DNA Methylation Editing of the FMR1 Gene.” Cell 172(5): 979-992 e976</a></p></li>
+<li><p><a href="http://www.cell.com/cell/fulltext/S0092-8674(16)31153-9">Liu, X. S., et al. (2016). “Editing DNA Methylation in the Mammalian Genome.” Cell 167(1): 233-247 e217</a></p></li>
+<li><p><a href="https://academic.oup.com/nar/article/45/4/1703/2605790">Stepper, P., et al. (2016). “Efficient targeted DNA methylation with chimeric dCas9-Dnmt3a-Dnmt3L methyltransferase.” Nucleic Acids Res.</a></p></li>
+<li><p><a href="https://www.nature.com/articles/nbt.3199">Hilton, I. B., et al. (2015). “Epigenome editing by a CRISPR-Cas9-based acetyltransferase activates genes from promoters and enhancers.” Nat Biotechnol 33(5): 510-517.</a></p></li>
 </ul>
 </div>
 
@@ -327,7 +297,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -345,7 +315,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
