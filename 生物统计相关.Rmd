@@ -13,6 +13,8 @@ output: html_document
     比较RNA-Seq的相关软件和流程总结  
 * [Van Den Berge, K., et al. (2019). "RNA sequencing data: hitchhiker's guide to expression analysis."](https://www.annualreviews.org/doi/full/10.1146/annurev-biodatasci-072018-021255)  
     Annual review的RNA-seq综述  
+* [Stark, R. M., et al. (2019). "RNA sequencing: the teenage years." Nat Rev Genet: 59.](https://www.nature.com/articles/s41576-019-0150-2)  
+    NRG RNA-Seq的综述  
 * [Kryuchkova-Mostacci, Nadezda, and Marc Robinson-Rechavi. "A benchmark of gene expression tissue-specificity metrics." Briefings in bioinformatics 18.2 (2017): 205-214.](https://academic.oup.com/bib/article/18/2/205/2562739?login=true)  
     benchmark度量tissue specificity的指标  
 
