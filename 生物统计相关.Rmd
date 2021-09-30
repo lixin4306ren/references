@@ -36,6 +36,11 @@ output: html_document
 * [Efficient R programming](https://bookdown.org/csgillespie/efficientR/)  
 * [Advanced R](http://adv-r.had.co.nz/)  
 
+### R作图ggplot2
+* [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)
+* [ComplexHeatmap Complete Reference](https://jokergoo.github.io/ComplexHeatmap-reference/book/)  
+    所有heatmap只学这一个包就足够了  
+
 ## Linux命令行
 * [命令行的艺术](https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md)
 
