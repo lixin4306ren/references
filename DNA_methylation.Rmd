@@ -4,6 +4,8 @@ output: html_document
 ---
 
 ## reviews
+* [A. L. Mattei, N. Bailly and A. Meissner (2022) "DNA methylation: a historical perspective" Trends in Genetics](https://www.sciencedirect.com/science/article/pii/S0168952522000713)
+    从学科发展角度综述DNA甲基化的研究  
 * [Cedar, H. and Dor Y. (2019) "Principles of DNA methylation and their implications for biology and medicine." Lancet 392: 777–86](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31268-6/fulltext)
 * [Greenberg, M. V. C. and D. Bourc'his (2019). "The diverse roles of DNA methylation in mammalian development and disease." Nature Reviews: Molecular Cell Biology 20(10): 590-607.](https://www.nature.com/articles/s41580-019-0159-6)
 * [Michalak, E. M., et al. (2019). "The roles of DNA, RNA and histone methylation in ageing and cancer." Nature Reviews: Molecular Cell Biology 20(10): 573-589.](https://www.nature.com/articles/s41580-019-0143-1)
